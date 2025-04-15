@@ -6,6 +6,3 @@
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
-
-# CSV and txt files
-*.csv
