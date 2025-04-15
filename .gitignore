@@ -1,0 +1,11 @@
+.DS_Store
+.env
+
+# VS Code Specific Files
+.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CSV and txt files
+*.csv
