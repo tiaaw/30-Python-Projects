@@ -19,6 +19,8 @@ def get_coordinates(address: str) -> Coordinates | None:
     if location: 
         return Coordinates(latitude=location.latitude, longitude=location.longitude)
     
+    return None
+    
     
 def main(): 
     home_address = '123 Main St, Sydney, Australia'
