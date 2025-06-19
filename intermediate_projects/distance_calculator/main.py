@@ -27,3 +27,7 @@ def main():
     print(f'Home address: {home_address}')
     
     print(get_coordinates(home_address))
+    
+    
+if __name__ == '__main__':
+    main()
