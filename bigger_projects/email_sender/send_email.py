@@ -10,8 +10,10 @@ import credentials
 
 def create_image_attachment(path: str) -> MIMEImage:
     """Create an image attachment from a file path. Needs some preprocessing."""
-    raise NotImplementedError("This function is not implemented yet.")
-
+    with open (path, 'rb') as image:
+        mime_image: MIMEImage = MIMEImage(image.read())
+        mime_image.add_header('Content-Disposition', f'attachment: filename={path}')  # For inline images
+        return mime_image
 
 def send_email(to_email: str, subject: str, body: str, image: str | None = None):
     host: str = 'smtp-mail.outlook.com'
@@ -45,5 +47,8 @@ def send_email(to_email: str, subject: str, body: str, image: str | None = None)
         print('Sent!')
         
 if __name__ == '__main__':
-    send_email(to_email='...')
+    send_email(
+        to_email='test_email@fastmail.com', 
+        subject='Hey there!', 
+        body="Hello there")
         
