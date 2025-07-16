@@ -38,10 +38,3 @@ def get_weather_details(weather: dict) -> list[Weather]:
         
     return list_of_weather
                     
-
-if __name__ == '__main__':
-    current_weather = get_weather('tokyo', mock=False)
-    weather = get_weather_details(current_weather)
-
-    for w in weather: 
-        print(w)
