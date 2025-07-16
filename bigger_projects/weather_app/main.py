@@ -1,6 +1,7 @@
-from weather_api import get_weather, get_weather_details, Weather
+from constant import API_KEY
+from weather_api import get_weather, get_weather_details
 
-API_KEY = 'a40df88d3825d8b7dc95106c639a4cdb'
+API_KEY = API_KEY
 BASE_URL = 'https://api.openweathermap.org/data/2.5/forecast?'
 
 def main(): 
